@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PaletaColores</string>
+    <string name="action_siguiente_text">siguiente</string>
+    <string name="action_anterior_text">anterior</string>
 </resources>
