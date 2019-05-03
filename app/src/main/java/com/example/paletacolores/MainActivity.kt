@@ -23,8 +23,17 @@ class MainActivity : AppCompatActivity(), FragmentStatic.OnColorClickListener, F
         supportFragmentManager.beginTransaction().replace(R.id.fragment_dinamic, fragment).commit()
     }
 
-    override fun changeColorOnClickListener() {
-
+    override fun changeColorOnClickListener(id : Int) {
+        if(id == R.id.action_anterior){
+            if(index == 0) index = 2
+            else index--
+        }
+        if(id == R.id.action_siguiente){
+            if(index == 2) index = 0
+            else index++
+        }
+        fragment = FragmentDinamic.newInstance(arrayColors, index)
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_dinamic, fragment).commit()
     }
 
     override fun changeToneOnClickListener() {
